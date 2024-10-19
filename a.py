@@ -1,4 +1,4 @@
-______import mysql.connector
+import mysql.connector
 import json
 
 conn = mysql.connector.connect(
@@ -23,7 +23,7 @@ cursor.execute(create_table_query)
 
 try:
     with open("profile_details.json") as f:
-    data = json.load(f)
+        data = json.load(f)
 
     insert_query = '''
         INSERT INTO users (employeeId, firstName, lastName) VALUES (%s, %s, %s)
